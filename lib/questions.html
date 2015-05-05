@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Riddler</title>
+        <link rel="stylesheet" href="questionsstyle.css" type="text/css" />
+    </head>
+    <body>
+        <div class="wrapper">
+        <div id="qHeadLeft">
+            <h1 id="qTitle">Riddler</h1>
+        </div>
+        <div id="qHeadRight">
+             <ul id="qNav">
+                 <li><a href="/leaderboard.html" class="qNavLinks">LeaderBoard</a></li>
+                 <li><a href="" class="qNavLinks" id="signOut">Log Out</a></li>
+             </ul>
+        </div>
+
+        <div id="Question">
+                <img src="images\light.jpg" alt="Something isn't right. Try reloading the page and keep checking fb.com/csiriddler for updates. If the problem persists, please get in touch with us" id="questionImg">
+        </div>
+
+            <div id="ansForm">
+                <p id="closeness" style="margin-bottom: -7px; height: 21px;"></p>
+                <h3 id="counter" style="display: inline">21</h3>/30
+                <input type="text" name="answer" placeholder="Answer" id="ans" onkeypress="enterer(event)" style="margin-left: 8px;"/>
+                <button id="subBtn" onclick="check(document.getElementById('ans').value)"><img src="images\next.png" alt="Submit" id="subPic"></button>
+                <img src="images\tick.png" alt="" style="position: relative; height: 30px; top: 5px; right: 35px;">
+                <a href="" id="nextqLink">Next question</a>
+            </div>
+        
+            <div id="questionmark" style="position: relative; top: 35px; width: 130px; left: -88px; -webkit-transition: 0.3s all ease; transition: 0.3s all ease;">
+                <button id="hintSwitch">Hint</button>
+                <img src="images\qm.png" alt="Hint" style="margin-left: 5px; height: 40px; display: inline-block;">
+            </div>
+
+            <div id="tint"></div> 
+
+            <div id="hint">
+                <h3 style="color: #808080; margin-bottom: 20px;">Hint</h3>
+                <div id="nohint" style="margin-bottom: 20px; opacity: 1; position: absolute; -webkit-transition: 0.3s all ease;">
+                    <h2 style="color: #535252; font-size: 30px;">You have <span id="currentPoints" style="color: #0094ff;">555</span> points</h2>
+                    <h2 style="color: #535252; font-size: 30px; margin-bottom: 20px;">This hint costs <span id="hintCost" style="color: #0094ff;">165</span> points</h2>
+                
+                    <button class="hintBtn" style="margin-right: 10px; background-color: #3fc951; border: 1px solid green;" onclick="buyHint()">Buy Hint</button><button class="hintBtn" style="background-color: crimson; border: 1px solid maroon;" onclick="closeHintsDiag()">Don't buy</button>
+                </div>
+                <div id="showhint" style="position: absolute; visibility: hidden; -webkit-transition: 0.5s all ease;">
+                    <p id="hintText" style="height: 150px; width: 460px; overflow-y: scroll;"></p>
+                    <button class="hintBtn" style="display: block; margin: auto;" onclick="closeHintsDiag()">Close</button>
+                </div>
+            </div>
+
+        <div class="push"></div></div>
+        <footer><a href="http://www.csivit.com" target="_blank" id="foot">© Computer Society of India | VIT Chapter</a></footer>
+        
+        <script src="questionsecma.js"></script>
+    </body>
+</html>

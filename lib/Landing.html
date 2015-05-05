@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Riddler</title>
+		<LINK REL="SHORTCUT ICON" HREF="http://cdn1.iconfinder.com/data/icons/fatcow/16x16/key_r.png"> 
+		<link href="styleSheet.css" rel="stylesheet" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
+		<link href='http://fonts.googleapis.com/css?family=Denk+One' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript">
+
+function openReg() {
+	//cell = document.getElementbyId("Frame"); cell.setAttribute("src", "registration.html");
+	$('#content1').css("display","none");
+	$('#content3').css("display","none");
+	$('#content4').css("display","none");
+	//$('#content2').css("display","block");
+	$('#content2').fadeIn('slow', function() {});
+}
+
+function openLog() {	
+	$('#content1').css("display","none");
+	$('#content2').css("display","none");
+	$('#content4').css("display","none");
+	//$('#content2').css("display","none");
+	$('#content3').fadeIn('slow', function() {});
+}
+
+function openFAQ() {	
+	$('#content1').css("display","none");
+	$('#content2').css("display","none");
+	$('#content3').css("display","none");
+	//$('#content2').css("display","none");
+	$('#content4').fadeIn('slow', function() {});
+}
+		</script>
+
+		<style>
+		#content2, #content3, #content4 {
+		display: none;
+	}
+
+	#content{
+		width: 45%;
+		float: left;
+	}
+
+	#content1, #content2, #content3, #content4{
+		margin-left: 40px;
+		margin-top: 7%;
+	}
+		</style>
+	
+	</head>
+
+
+	<body id="bodystyle">
+		
+		<img src="Logo.jpg" id = "logo"><h1 id="first">Riddler</h1>
+
+		<div id = "content">
+			<div onClick="openReg()"><h2 id = "reg">REGISTRATION</h2></div> 
+			<div onClick="openLog()"><h2 id = "log">LOGIN</h2></div>
+			<div onClick="openFAQ()"><h2 id = "faq">RULES</h2></div>
+
+		</div>
+
+		<div id = "rightContent">
+		<div id="content1">
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/_d0LfkIut2M" frameborder="0" allowfullscreen seamless></iframe>
+			</div>
+
+		<div id="content2">
+			<iframe id="Frame1" width="560" height="315" src="reg_body.php" frameborder="0" seamless></iframe>
+			</div>
+
+		<div id="content3">
+			<iframe id="Frame2" width="560" height="315" src="login.php" frameborder="0" seamless></iframe>
+			</div>
+
+		<div id="content4">
+			<iframe id="Frame3" width="560" height="311" src="rules.html" frameborder="1" seamless></iframe>
+			</div>
+	</div>
+		<div id="link">
+		<a href="http://vit.csivellore.net/" id = "csi"><p align = "center">Computer Society of India <br> VIT University Chapter</p></a>
+		</div>
+
+		<script type="text/javascript" src="javas.js"></script>
+	</body>
+</html>
